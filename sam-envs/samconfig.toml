@@ -1,0 +1,36 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "sam-envs-default"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-xxxxxxxxxxxx"
+s3_prefix = "sam-envs-default"
+region = "ap-northeast-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
+parameter_overrides="Env=default"
+
+[test1]
+[test1.deploy]
+[test1.deploy.parameters]
+stack_name = "sam-envs-test1"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-xxxxxxxxxxxx"
+s3_prefix = "sam-envs-test1"
+region = "ap-northeast-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
+parameter_overrides="Env=test1"
+
+[test2]
+[test2.deploy]
+[test2.deploy.parameters]
+stack_name = "sam-envs-test2"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-xxxxxxxxxxxx"
+s3_prefix = "sam-envs-test2"
+region = "ap-northeast-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
+parameter_overrides="Env=test2"
